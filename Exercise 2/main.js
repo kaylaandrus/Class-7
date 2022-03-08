@@ -1,15 +1,17 @@
-// function parent(x) {
-// return function closure() {
-// Closure is declared here.
-//   return x;
-// };
-//   }
+function parent(x) {
+  return function closure(job) {
+    // Closure is declared here.
+    return x;
+  };
+}
 
-//   const remember = parent("remembers me");
+const remember = parent("remembers me");
+
+console.log(remember());
 // Seems like the variable x would be gone after
 // parent is executed, but it's not.
 
-//   closure();
+// closure();
 // Returns "remembers me" because the inner
 // function remembers x.
 
